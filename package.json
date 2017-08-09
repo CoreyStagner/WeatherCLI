@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CoreyStagner/WeatherCLI/issues"
   },
-  "homepage": "https://github.com/CoreyStagner/WeatherCLI#readme"
+  "homepage": "https://github.com/CoreyStagner/WeatherCLI#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {}
 }

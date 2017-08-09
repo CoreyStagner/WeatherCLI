@@ -1,5 +1,18 @@
-var fs = require("fs");
+var weather = require("weather-js");
 
-var input = process.argv;
-var login = input[2];
-var location = input.splice(2);
+var Weather = function(name, location) {
+    this.name = name;
+    this.location = location;
+
+    this.getWeather = function() {
+        weather.find({ search: this.location, degreeType: "F" }, function(err, result) {
+            if (err) {
+                return console.log(err);
+            }
+            console.log(JSON.stringify(result, null, 2));
+        });
+    }
+}
+
+var myWeather = new Weather("Kevin", "Charlotte, NC");
+myWeather.getWeather();
